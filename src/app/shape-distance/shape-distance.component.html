@@ -1,0 +1,46 @@
+<!-- cylinder-distance.component.html -->
+<h2>Cylinder Distance Calculator</h2>
+<form (ngSubmit)="calculateDistance()">
+  <!-- Cylinder 1 Inputs -->
+  <div>
+    <label>X1:</label>
+    <input type="number" [(ngModel)]="cylinder1.x" name="x1" />
+  </div>
+  <div>
+    <label>Y1:</label>
+    <input type="number" [(ngModel)]="cylinder1.y" name="y1" />
+  </div>
+  <div>
+    <label>Z1:</label>
+    <input type="number" [(ngModel)]="cylinder1.z" name="z1" />
+  </div>
+  <div>
+    <label>Diameter 1:</label>
+    <input type="number" [(ngModel)]="cylinder1.diameter" name="diameter1" />
+  </div>
+
+  <!-- Cylinder 2 Inputs -->
+  <div>
+    <label>X2:</label>
+    <input type="number" [(ngModel)]="cylinder2.x" name="x2" />
+  </div>
+  <div>
+    <label>Y2:</label>
+    <input type="number" [(ngModel)]="cylinder2.y" name="y2" />
+  </div>
+  <div>
+    <label>Z2:</label>
+    <input type="number" [(ngModel)]="cylinder2.z" name="z2" />
+  </div>
+  <div>
+    <label>Diameter 2:</label>
+    <input type="number" [(ngModel)]="cylinder2.diameter" name="diameter2" />
+  </div>
+
+  <button type="submit">Calculate Distance</button>
+</form>
+
+<!-- Show calculated distance -->
+<div *ngIf="distance !== null">
+  <h3>Distance between cylinders: {{ distance }} units</h3>
+</div>
